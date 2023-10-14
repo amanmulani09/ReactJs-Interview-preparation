@@ -1,5 +1,5 @@
 import Slideshow from './Slideshow';
-
+import './example.css'
 const Example = () => {
     const images = [
         {
