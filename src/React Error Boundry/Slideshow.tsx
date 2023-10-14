@@ -7,6 +7,7 @@ type slideShow = {
 }
 
 const Slideshow = ({images}:{images:slideShow[]})=>{
+    const [error,setError] = useState(true)
     const [active,setActive] = useState(0)
 
     const onLeft = ()=>{
@@ -24,6 +25,8 @@ const Slideshow = ({images}:{images:slideShow[]})=>{
                 setActive(prev => prev+1)
             }
     }
+
+    if(error) return <h1> Something Went Wrong </h1>
 
     return(
         <div className="slideshow">
